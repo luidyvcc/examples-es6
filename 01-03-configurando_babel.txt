@@ -1,0 +1,3 @@
+package.json = arquivo que contem informações das dependências do nosso projeto. (semelhante ao POM nos projetos MAVEN em Java)
+
+-w = faz a transpilação em tempo real
