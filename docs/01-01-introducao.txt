@@ -1,0 +1,15 @@
+ES6 = pacote de regras de 2015.
+
+Babel = Transpilador. Converte funcionalidades do ES6 (ou superior) para uma versão anterior, conforme a versão do navegador. Assim, todos os navegadores poderão entender nosso código.
+
+Algumas funcionalidades:
+
+Webpack
+Classes
+Arrow Function
+Desestruturação
+Rest/spread
+Import/export
+Async/await
+
+

@@ -1,0 +1,3 @@
+node = Interpretador de código JS
+
+yarn = Gerenciador de pacotes JS
