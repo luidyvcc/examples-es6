@@ -1,0 +1,3 @@
+Classes "static" não precisa de contrutor. Seus métodos são usador para receber, processar e retornar informações.
+
+Herança = "extends ClassePai", use "super();" para chamar o construtor da classe pai.
