@@ -1,5 +1,5 @@
 /*
-    01.03 - Classes
+    01.04 - Classes
 */
 
 // class List {
@@ -45,7 +45,7 @@
 
 
 /*
-    01.04 - Const & Let
+    01.05 - Const & Let
 */
 
 //const a = 1;
@@ -71,7 +71,7 @@
 
 
 /*
-    01.05 - Operações com array
+    01.06 - Operações com array
 */
 
 const arr = [1, 3, 4, 5, 8, 9];
