@@ -1,7 +1,7 @@
 "use strict";
 
 /*
-    01.03 - Classes
+    01.04 - Classes
 */
 // class List {
 //     constructor() {
@@ -35,7 +35,7 @@
 // console.log(Matematica.soma(1, 5));
 
 /*
-    01.04 - Const & Let
+    01.05 - Const & Let
 */
 //const a = 1;
 //a = 2; // Gera um erro
@@ -54,22 +54,56 @@
 // teste();
 
 /*
-    01.05 - Operações com array
+    01.06 - Operações com array
 */
-var arr = [1, 3, 4, 5, 8, 9];
-var newArr = arr.map(function (item, index) {
-  return item + index;
+// const arr = [1, 3, 4, 5, 8, 9];
+// const newArr = arr.map(function(item, index){
+//     return item + index;
+// });
+// console.log(newArr);
+// const sum = arr.reduce(function(total, next){
+//     return total + next;
+// });
+// console.log(sum);
+// const filter = arr.filter(function(item){
+//     return item % 2 === 0;
+// });
+// console.log(filter);
+// const find = arr.find(function(item){
+//     return item == 3;
+// });
+// console.log(find);
+
+/*
+    01.07 - Arrow function
+*/
+var arr = [1, 3, 4, 5, 6]; // Exemplo 01
+
+var newArr = arr.map(function (item) {
+  return item * 2;
 });
-console.log(newArr);
-var sum = arr.reduce(function (total, next) {
-  return total + next;
-});
-console.log(sum);
+console.log(newArr); // Exemplo 02
+
 var filter = arr.filter(function (item) {
   return item % 2 === 0;
 });
-console.log(filter);
+console.log(filter); // Exemplo 03
+
 var find = arr.find(function (item) {
-  return item == 3;
+  return item == 5;
 });
-console.log(find);
+console.log(find); // Exemplo 04 - Não recomendado
+
+var teste = function teste(x) {
+  return x + 500;
+};
+
+console.log(teste(2));
+
+var teste2 = function teste2() {
+  return {
+    nome: "Marcia"
+  };
+};
+
+console.log(teste2());

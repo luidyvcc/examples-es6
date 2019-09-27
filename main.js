@@ -74,24 +74,53 @@
     01.06 - Operações com array
 */
 
-const arr = [1, 3, 4, 5, 8, 9];
+// const arr = [1, 3, 4, 5, 8, 9];
 
-const newArr = arr.map(function(item, index){
-    return item + index;
+// const newArr = arr.map(function(item, index){
+//     return item + index;
+// });
+// console.log(newArr);
+
+// const sum = arr.reduce(function(total, next){
+//     return total + next;
+// });
+// console.log(sum);
+
+// const filter = arr.filter(function(item){
+//     return item % 2 === 0;
+// });
+// console.log(filter);
+
+// const find = arr.find(function(item){
+//     return item == 3;
+// });
+// console.log(find);
+
+/*
+    01.07 - Arrow function
+*/
+
+const arr = [1, 3, 4, 5, 6];
+
+// Exemplo 01
+const newArr = arr.map((item) => {
+    return item * 2;
 });
 console.log(newArr);
 
-const sum = arr.reduce(function(total, next){
-    return total + next;
-});
-console.log(sum);
-
-const filter = arr.filter(function(item){
+// Exemplo 02
+const filter = arr.filter(item => {
     return item % 2 === 0;
 });
 console.log(filter);
 
-const find = arr.find(function(item){
-    return item == 3;
-});
+// Exemplo 03
+const find = arr.find( item => item == 5 );
 console.log(find);
+
+// Exemplo 04 - Não recomendado
+const teste = (x) => x+500;
+console.log(teste(2));
+
+const teste2 = () => ({ nome: "Marcia" });
+console.log(teste2());
