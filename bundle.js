@@ -100,21 +100,41 @@
 /*
     01.08 - Valores padrão
 */
-// Exemplo 01
-function soma() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
-  return a + b;
+// // Exemplo 01
+// function soma(a = 3, b = 6) {
+//     return a + b
+// }
+// console.log(soma(1));
+// console.log(soma());
+// // Exemplo 02 - Com arrow function
+// const soma2 = (a = 2, b = 4) => a + b;
+// console.log(soma2(1));
+// console.log(soma2());
+
+/*
+    01.09 - Desestruturação
+*/
+var usuario = {
+  nome: "Marcia",
+  idade: 18,
+  endereco: {
+    cidade: "Jaú",
+    estado: "SP"
+  }
+};
+console.log(usuario); // Exemplo 01
+
+var nome = usuario.nome,
+    idade = usuario.idade,
+    cidade = usuario.endereco.cidade;
+console.log(nome);
+console.log(idade);
+console.log(cidade); // Exemplo 02
+
+function exibeNomeIdade(_ref) {
+  var nome = _ref.nome,
+      idade = _ref.idade;
+  console.log("Nome: " + nome + ", idade: " + idade);
 }
 
-console.log(soma(1));
-console.log(soma()); // Exemplo 02 - Com arrow function
-
-var soma2 = function soma2() {
-  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
-  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
-  return a + b;
-};
-
-console.log(soma2(1));
-console.log(soma2());
+exibeNomeIdade(usuario);

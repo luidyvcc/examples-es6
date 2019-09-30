@@ -129,15 +129,40 @@
     01.08 - Valores padrão
 */
 
+// // Exemplo 01
+// function soma(a = 3, b = 6) {
+//     return a + b
+// }
+// console.log(soma(1));
+// console.log(soma());
+
+// // Exemplo 02 - Com arrow function
+
+// const soma2 = (a = 2, b = 4) => a + b;
+// console.log(soma2(1));
+// console.log(soma2());
+
+/*
+    01.09 - Desestruturação
+*/
+const usuario = {
+    nome: "Marcia",
+    idade: 18,
+    endereco: {
+        cidade: "Jaú",
+        estado: "SP"
+    }
+};
+console.log(usuario);
+
 // Exemplo 01
-function soma(a = 3, b = 6) {
-    return a + b
+const { nome, idade, endereco: { cidade } } = usuario;
+console.log(nome);
+console.log(idade);
+console.log(cidade);
+
+// Exemplo 02
+function exibeNomeIdade( { nome, idade} ) {
+    console.log( "Nome: "+nome+", idade: "+idade );
 }
-console.log(soma(1));
-console.log(soma());
-
-// Exemplo 02 - Com arrow function
-
-const soma2 = (a = 2, b = 4) => a + b;
-console.log(soma2(1));
-console.log(soma2());
+exibeNomeIdade(usuario);
