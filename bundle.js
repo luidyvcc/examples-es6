@@ -77,33 +77,44 @@
 /*
     01.07 - Arrow function
 */
-var arr = [1, 3, 4, 5, 6]; // Exemplo 01
+// const arr = [1, 3, 4, 5, 6];
+// // Exemplo 01
+// const newArr = arr.map((item) => {
+//     return item * 2;
+// });
+// console.log(newArr);
+// // Exemplo 02
+// const filter = arr.filter(item => {
+//     return item % 2 === 0;
+// });
+// console.log(filter);
+// // Exemplo 03
+// const find = arr.find( item => item == 5 );
+// console.log(find);
+// // Exemplo 04 - Não recomendado
+// const teste = (x) => x+500;
+// console.log(teste(2));
+// const teste2 = () => ({ nome: "Marcia" });
+// console.log(teste2());
 
-var newArr = arr.map(function (item) {
-  return item * 2;
-});
-console.log(newArr); // Exemplo 02
+/*
+    01.08 - Valores padrão
+*/
+// Exemplo 01
+function soma() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 3;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 6;
+  return a + b;
+}
 
-var filter = arr.filter(function (item) {
-  return item % 2 === 0;
-});
-console.log(filter); // Exemplo 03
+console.log(soma(1));
+console.log(soma()); // Exemplo 02 - Com arrow function
 
-var find = arr.find(function (item) {
-  return item == 5;
-});
-console.log(find); // Exemplo 04 - Não recomendado
-
-var teste = function teste(x) {
-  return x + 500;
+var soma2 = function soma2() {
+  var a = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 2;
+  var b = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 4;
+  return a + b;
 };
 
-console.log(teste(2));
-
-var teste2 = function teste2() {
-  return {
-    nome: "Marcia"
-  };
-};
-
-console.log(teste2());
+console.log(soma2(1));
+console.log(soma2());

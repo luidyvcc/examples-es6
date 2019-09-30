@@ -100,27 +100,44 @@
     01.07 - Arrow function
 */
 
-const arr = [1, 3, 4, 5, 6];
+// const arr = [1, 3, 4, 5, 6];
+
+// // Exemplo 01
+// const newArr = arr.map((item) => {
+//     return item * 2;
+// });
+// console.log(newArr);
+
+// // Exemplo 02
+// const filter = arr.filter(item => {
+//     return item % 2 === 0;
+// });
+// console.log(filter);
+
+// // Exemplo 03
+// const find = arr.find( item => item == 5 );
+// console.log(find);
+
+// // Exemplo 04 - Não recomendado
+// const teste = (x) => x+500;
+// console.log(teste(2));
+
+// const teste2 = () => ({ nome: "Marcia" });
+// console.log(teste2());
+
+/*
+    01.08 - Valores padrão
+*/
 
 // Exemplo 01
-const newArr = arr.map((item) => {
-    return item * 2;
-});
-console.log(newArr);
+function soma(a = 3, b = 6) {
+    return a + b
+}
+console.log(soma(1));
+console.log(soma());
 
-// Exemplo 02
-const filter = arr.filter(item => {
-    return item % 2 === 0;
-});
-console.log(filter);
+// Exemplo 02 - Com arrow function
 
-// Exemplo 03
-const find = arr.find( item => item == 5 );
-console.log(find);
-
-// Exemplo 04 - Não recomendado
-const teste = (x) => x+500;
-console.log(teste(2));
-
-const teste2 = () => ({ nome: "Marcia" });
-console.log(teste2());
+const soma2 = (a = 2, b = 4) => a + b;
+console.log(soma2(1));
+console.log(soma2());
