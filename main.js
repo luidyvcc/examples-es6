@@ -172,51 +172,62 @@
 */
 
 
-// Exemplo 01 - REST com objeto 
-const usuario = {
-    nome: "Maria",
-    idade: 25,
-    telefone: "14996699966"
-};
+// // Exemplo 01 - REST com objeto 
+// const usuario = {
+//     nome: "Maria",
+//     idade: 25,
+//     telefone: "14996699966"
+// };
 
-const { idade, ...resto } = usuario;
-console.log(idade);
-console.log(resto);
+// const { idade, ...resto } = usuario;
+// console.log(idade);
+// console.log(resto);
 
-// Exemplo 02 - REST com array
-const arr = [1, 2, 3, 4];
+// // Exemplo 02 - REST com array
+// const arr = [1, 2, 3, 4];
 
-const [a, b, ...c] = arr;
+// const [a, b, ...c] = arr;
 
-console.log(a);
-console.log(b);
-console.log(c);
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
-// Exemplo 02 - REST em parametro
-function soma(...parametro) {
-    return parametro.reduce((total, next) => total + next);
-}
+// // Exemplo 02 - REST em parametro
+// function soma(...parametro) {
+//     return parametro.reduce((total, next) => total + next);
+// }
 
-function soma2(a, b, ...parametro) {
-    return parametro;
-}
+// function soma2(a, b, ...parametro) {
+//     return parametro;
+// }
 
-console.log(soma(1, 2, 3));
-console.log(soma2(1, 2, 3, 4, 5));
+// console.log(soma(1, 2, 3));
+// console.log(soma2(1, 2, 3, 4, 5));
 
-// Exemplo 03 - SPREAD unindo arrays
-const arr1 = [1, 2, 3];
-const arr2 = [4, 5, 6];
-const arr3 = [ ...arr1, ...arr2];
-console.log(arr3);
+// // Exemplo 03 - SPREAD unindo arrays
+// const arr1 = [1, 2, 3];
+// const arr2 = [4, 5, 6];
+// const arr3 = [ ...arr1, ...arr2];
+// console.log(arr3);
 
-// Exemplo 03 - SPREAD unindo arrays
-const usuario1 = {
-    nome: "Marcia",
-    idade: 22,
-    telefone: "14999999669"
-}
+// // Exemplo 03 - SPREAD unindo arrays
+// const usuario1 = {
+//     nome: "Marcia",
+//     idade: 22,
+//     telefone: "14999999669"
+// }
 
-const usuario2 = { ...usuario1, nome: "Talita" };
-console.log(usuario1);
-console.log(usuario2);
+// const usuario2 = { ...usuario1, nome: "Talita" };
+// console.log(usuario1);
+// console.log(usuario2);
+
+/*
+    01.11 - Template literals (usar crase ao invés de aspas)
+*/
+
+const nome = "Mario";
+const idade = 27;
+
+// console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+console.log(`Meu nome é ${nome} e tenho ${idade} anos de idade.`);
+
