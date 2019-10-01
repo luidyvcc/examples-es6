@@ -1,0 +1,2 @@
+Instalar plugin:
+yarn add @babel/plugin-proposal-object-rest-spread

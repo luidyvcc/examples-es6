@@ -145,24 +145,78 @@
 /*
     01.09 - Desestruturação
 */
+// const usuario = {
+//     nome: "Marcia",
+//     idade: 18,
+//     endereco: {
+//         cidade: "Jaú",
+//         estado: "SP"
+//     }
+// };
+// console.log(usuario);
+
+// // Exemplo 01
+// const { nome, idade, endereco: { cidade } } = usuario;
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
+
+// // Exemplo 02
+// function exibeNomeIdade( { nome, idade} ) {
+//     console.log( "Nome: "+nome+", idade: "+idade );
+// }
+// exibeNomeIdade(usuario);
+
+/*
+    01.10 - Operadores rest/spread
+*/
+
+
+// Exemplo 01 - REST com objeto 
 const usuario = {
-    nome: "Marcia",
-    idade: 18,
-    endereco: {
-        cidade: "Jaú",
-        estado: "SP"
-    }
+    nome: "Maria",
+    idade: 25,
+    telefone: "14996699966"
 };
-console.log(usuario);
 
-// Exemplo 01
-const { nome, idade, endereco: { cidade } } = usuario;
-console.log(nome);
+const { idade, ...resto } = usuario;
 console.log(idade);
-console.log(cidade);
+console.log(resto);
 
-// Exemplo 02
-function exibeNomeIdade( { nome, idade} ) {
-    console.log( "Nome: "+nome+", idade: "+idade );
+// Exemplo 02 - REST com array
+const arr = [1, 2, 3, 4];
+
+const [a, b, ...c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+// Exemplo 02 - REST em parametro
+function soma(...parametro) {
+    return parametro.reduce((total, next) => total + next);
 }
-exibeNomeIdade(usuario);
+
+function soma2(a, b, ...parametro) {
+    return parametro;
+}
+
+console.log(soma(1, 2, 3));
+console.log(soma2(1, 2, 3, 4, 5));
+
+// Exemplo 03 - SPREAD unindo arrays
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const arr3 = [ ...arr1, ...arr2];
+console.log(arr3);
+
+// Exemplo 03 - SPREAD unindo arrays
+const usuario1 = {
+    nome: "Marcia",
+    idade: 22,
+    telefone: "14999999669"
+}
+
+const usuario2 = { ...usuario1, nome: "Talita" };
+console.log(usuario1);
+console.log(usuario2);

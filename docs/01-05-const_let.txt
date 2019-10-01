@@ -2,7 +2,7 @@ KeyWords = palavras reservadar. "var", "const", "let" ...
 
 Diferença entre "var" e "const" = Uma "const" não pode ter seu valor reatribuido, diferente da "var" que pode ser reatribuído a qualquer momento no código.
 
-Poré, uma "cont" pode sofrer mutação:
+Poré, uma "cosnt" pode sofrer mutação:
 
 const a = { nome: "Marcelo"};
 a.nome = "Julio"; // Mutação
