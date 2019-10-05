@@ -235,12 +235,19 @@
     01.12 - Object Short Syntax
 */
 
-const nome = "Marcos";
-const idade = 27;
+// const nome = "Marcos";
+// const idade = 27;
 
-const usuario = {
-    nome,
-    idade,
-    empresa: "Google"
-};
-console.log(usuario);
+// const usuario = {
+//     nome,
+//     idade,
+//     empresa: "Google"
+// };
+// console.log(usuario);
+
+/*
+    02.01 - Configurando e testando o Webpack
+*/
+import { soma } from '../functions';
+
+console.log(soma(1,2));
