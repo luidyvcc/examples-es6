@@ -248,29 +248,31 @@
 /*
     02.01 - Configurando e testando o Webpack
 */
-// import { soma } from '../functions';
+// import { soma } from './functions';
 // console.log(soma(1,2));
 
 /*
     02.02 - Export e Import
 */
 // Nesse exemplo nenhuma função é default
-// import { divide, subtrai } from '../functions';
+// import { divide, subtrai } from './functions';
 // console.log(divide(1,2));
 // console.log(subtrai(3,2));
 
 // Função que não é default pode ser renomeada usando "as"
 // Se for default, a função fica fora das chaves com qualquer nome
-// import  somaDoisNumeros , { subtrai as sub } from '../functions';
+// import  somaDoisNumeros , { subtrai as sub } from './functions';
 // console.log(somaDoisNumeros(1,2));
 // console.log(sub(3,2));
 
-// import multiplicaDoisNumeros from '../multiplication';
+// import multiplicaDoisNumeros from './multiplication';
 // console.log(multiplicaDoisNumeros(1,2));
 
-// Importa todas funções para um objeto
-import * as funcoes from '../functions';
-// assim é chamado a unica função default do arquivo
-console.log(funcoes.default(1,2)); 
-console.log(funcoes.divide(1,2));
-console.log(funcoes.subtrai(3,2));
+// // Importa todas funções para um objeto
+// import * as funcoes from './functions';
+// // assim é chamado a unica função default do arquivo
+// console.log(funcoes.default(1,2)); 
+// console.log(funcoes.divide(1,2));
+// console.log(funcoes.subtrai(3,2));
+
+alert(90);
