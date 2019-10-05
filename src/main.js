@@ -225,9 +225,22 @@
     01.11 - Template literals (usar crase ao invés de aspas)
 */
 
-const nome = "Mario";
+// const nome = "Mario";
+// const idade = 27;
+
+// // console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
+// console.log(`Meu nome é ${nome} e tenho ${idade} anos de idade.`);
+
+/*
+    01.12 - Object Short Syntax
+*/
+
+const nome = "Marcos";
 const idade = 27;
 
-// console.log("Meu nome é " + nome + " e tenho " + idade + " anos.");
-console.log(`Meu nome é ${nome} e tenho ${idade} anos de idade.`);
-
+const usuario = {
+    nome,
+    idade,
+    empresa: "Google"
+};
+console.log(usuario);
