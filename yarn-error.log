@@ -14,7 +14,7 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\Documents\Cursos\Rocketseat\ES6\package.json: Unexpected token / in JSON at position 455
+  SyntaxError: D:\Documents\Cursos\Rocketseat\ES6\package.json: Unexpected token } in JSON at position 1005
       at JSON.parse (<anonymous>)
       at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
       at Generator.next (<anonymous>)
@@ -39,14 +39,13 @@ npm manifest:
     },
     "scripts": {
       "dev": "webpack-dev-server --mode=development",
-      // "dev": "webpack --mode=development -w",
-      "lesson-01-01": "babel ./src/hands_on_01/lesson-01.js -o ./bundle.js -w",
-      "lesson-01-02": "babel ./src/hands_on_01/lesson-02.js -o ./bundle.js -w",
-      "lesson-01-03": "babel ./src/hands_on_01/lesson-03.js -o ./bundle.js -w",
-      "lesson-01-04": "babel ./src/hands_on_01/lesson-04.js -o ./bundle.js -w",
-      "lesson-01-05": "babel ./src/hands_on_01/lesson-05.js -o ./bundle.js -w",
-      "lesson-01-06": "babel ./src/hands_on_01/lesson-06.js -o ./bundle.js -w",
-      "lesson-01-07": "babel ./src/hands_on_01/lesson-07.js -o ./bundle.js -w"
+      "build": "webpack --mode=production",
+      "lesson-01-01": "babel ./src/hands_on_01/lesson-01.js -o ./public/bundle.js -w",
+      "lesson-01-02": "babel ./src/hands_on_01/lesson-02.js -o ./public/bundle.js -w",
+      "lesson-01-03": "babel ./src/hands_on_01/lesson-03.js -o ./public/bundle.js -w",
+      "lesson-01-04": "babel ./src/hands_on_01/lesson-04.js -o ./public/bundle.js -w",
+      "lesson-01-05": "babel ./src/hands_on_01/lesson-05.js -o ./public/bundle.js -w",
+      "lesson-01-06": "babel ./src/hands_on_01/lesson-06.js -o ./public/bundle.js -w",
     }
   }
 
