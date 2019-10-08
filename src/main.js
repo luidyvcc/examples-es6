@@ -279,3 +279,38 @@
     02.03 - Webpack dev server
 */
 // alert(90);
+
+/*
+    03.01 - Async/Await
+*/
+
+const minhaPromise = () => new Promise((resolve, reject) => {
+    setTimeout( () => { resolve('OK') }, 2000 );
+});
+
+// Exemplo de chamada promisse comum:
+// minhaPromise()
+//     .then(response => {
+//         console.log(response);
+//     })
+//     .catch(error => {
+//         console.warn(error);
+//     });
+
+// Exemplo 01 - função assincrona
+async function executaPromise() {
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+}
+
+// Exemplo 02 - arrow função assincrona
+const executaPromise2 = async () => {
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+    console.log(await minhaPromise());
+}
+
+executaPromise2();
+
+

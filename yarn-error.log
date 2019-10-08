@@ -1,5 +1,5 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js dev
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js add @babel/plugin-transform-assync-to-generator -D
 
 PATH: 
   C:\Python37\Scripts\;C:\Python37\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\Yarn\bin\;C:\Users\Luidy\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Luidy\AppData\Roaming\npm;C:\Users\Luidy\AppData\Local\Microsoft\WindowsApps;C:\Users\Luidy\AppData\Roaming\Composer\vendor\bin;C:\Users\Luidy\.dotnet\tools;C:\Users\Luidy\AppData\Local\atom\bin;C:\Program Files\apache-maven-3.6.2\bin;C:\Users\Luidy\AppData\Local\Yarn\bin;C:\tools\dart-sdk\bin;C:\Users\Luidy\AppData\Roaming\Pub\Cache\bin;C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Python 3.7;
@@ -14,12 +14,17 @@ Platform:
   win32 x64
 
 Trace: 
-  SyntaxError: D:\Documents\Cursos\Rocketseat\ES6\package.json: Unexpected token } in JSON at position 1005
-      at JSON.parse (<anonymous>)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:1625:59
-      at Generator.next (<anonymous>)
-      at step (C:\Program Files (x86)\Yarn\lib\cli.js:304:30)
-      at C:\Program Files (x86)\Yarn\lib\cli.js:315:13
+  Error: https://registry.yarnpkg.com/@babel%2fplugin-transform-assync-to-generator: Not found
+      at Request.params.callback [as _callback] (C:\Program Files (x86)\Yarn\lib\cli.js:65939:18)
+      at Request.self.callback (C:\Program Files (x86)\Yarn\lib\cli.js:140464:22)
+      at Request.emit (events.js:182:13)
+      at Request.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141436:10)
+      at Request.emit (events.js:182:13)
+      at IncomingMessage.<anonymous> (C:\Program Files (x86)\Yarn\lib\cli.js:141358:12)
+      at Object.onceWrapper (events.js:273:13)
+      at IncomingMessage.emit (events.js:187:15)
+      at endReadableNT (_stream_readable.js:1094:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
 
 npm manifest: 
   {
@@ -46,6 +51,7 @@ npm manifest:
       "lesson-01-04": "babel ./src/hands_on_01/lesson-04.js -o ./public/bundle.js -w",
       "lesson-01-05": "babel ./src/hands_on_01/lesson-05.js -o ./public/bundle.js -w",
       "lesson-01-06": "babel ./src/hands_on_01/lesson-06.js -o ./public/bundle.js -w",
+      "lesson-01-07": "babel ./src/hands_on_01/lesson-07.js -o ./public/bundle.js -w"
     }
   }
 
