@@ -280,37 +280,58 @@
 */
 // alert(90);
 
+
 /*
     03.01 - Async/Await
 */
+// const minhaPromise = () => new Promise((resolve, reject) => {
+//     setTimeout( () => { resolve('OK') }, 2000 );
+// });
 
-const minhaPromise = () => new Promise((resolve, reject) => {
-    setTimeout( () => { resolve('OK') }, 2000 );
-});
+// // Exemplo de chamada promisse comum:
+// // minhaPromise()
+// //     .then(response => {
+// //         console.log(response);
+// //     })
+// //     .catch(error => {
+// //         console.warn(error);
+// //     });
 
-// Exemplo de chamada promisse comum:
-// minhaPromise()
-//     .then(response => {
-//         console.log(response);
-//     })
-//     .catch(error => {
-//         console.warn(error);
-//     });
+// // Exemplo 01 - função assincrona
+// async function executaPromise() {
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+// }
 
-// Exemplo 01 - função assincrona
-async function executaPromise() {
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
+// // Exemplo 02 - arrow função assincrona
+// const executaPromise2 = async () => {
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+//     console.log(await minhaPromise());
+// }
+
+// executaPromise2();
+
+
+/*
+    03.02 - Axios
+*/
+import axios from 'axios';
+
+class Api{
+
+    static async getUserInfo(username) {
+        try {
+            const response = await axios.get(`https://api.github.com/users/${username}`);
+            console.log(response);
+        } catch (error) {
+            console.warn("Erro na API");
+        }
+    }
+
 }
 
-// Exemplo 02 - arrow função assincrona
-const executaPromise2 = async () => {
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-    console.log(await minhaPromise());
-}
-
-executaPromise2();
-
+Api.getUserInfo('luidyvcc'); // gera um objeto
+Api.getUserInfo('luidyvccsdfasdf'); // gera um erro e um aletra
 
