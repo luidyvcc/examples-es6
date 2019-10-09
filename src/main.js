@@ -317,21 +317,21 @@
 /*
     03.02 - Axios
 */
-import axios from 'axios';
+// import axios from 'axios';
 
-class Api{
+// class Api{
 
-    static async getUserInfo(username) {
-        try {
-            const response = await axios.get(`https://api.github.com/users/${username}`);
-            console.log(response);
-        } catch (error) {
-            console.warn("Erro na API");
-        }
-    }
+//     static async getUserInfo(username) {
+//         try {
+//             const response = await axios.get(`https://api.github.com/users/${username}`);
+//             console.log(response);
+//         } catch (error) {
+//             console.warn("Erro na API");
+//         }
+//     }
 
-}
+// }
 
-Api.getUserInfo('luidyvcc'); // gera um objeto
-Api.getUserInfo('luidyvccsdfasdf'); // gera um erro e um aletra
+// Api.getUserInfo('luidyvcc'); // gera um objeto
+// Api.getUserInfo('luidyvccsdfasdf'); // gera um erro e um aletra
 
